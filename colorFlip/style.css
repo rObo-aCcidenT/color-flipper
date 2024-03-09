@@ -1,0 +1,100 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Mono", monospace;
+    overflow: hidden;
+}
+
+.marquee {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    white-space: nowrap;
+    z-index: 99;
+  }
+  
+  .marquee span {
+      font-size: 24px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: rgb(18, 16, 16);
+      padding: 10px;
+      animation: animate_text 15s linear infinite;
+    }
+    .marquee1 {
+        position: absolute;
+        width: 100%;
+        overflow: hidden;
+    display: flex;
+    white-space: nowrap;
+    z-index: 99;
+    bottom: 0;
+      }
+.marquee1 span {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(18, 16, 16);
+    padding: 10px;
+    animation: animate_text1 15s linear infinite;
+  }
+  
+  @keyframes animate_text {
+    from {
+      transform: translate3d(0, 0, 100%);
+    }
+    to {
+      transform: translate3d(100%, 0, 0);
+    }
+  }
+  @keyframes animate_text1 {
+    from {
+      transform: translate3d(100%, 0, 0);
+    }
+    to {
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+
+#roundedHeding{
+    font-size: 4rem;
+    position: absolute;
+    z-index: 99;
+    top: 18vh;
+    left: 50vw;
+    color: rgb(18, 16, 16);
+    text-align: center;
+    line-height: 120px; 
+    font-weight: bold;
+    font-size: 3em;
+}
+#colorFlipper{
+    position: relative;
+    z-index: 1;
+    align-items: center;
+    width: 100vw; 
+    height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+}
+
+button{
+    font-family: "Roboto Mono", monospace;
+    margin: 20px;
+    padding: 10px 30px;
+    border-radius: 19px;
+    cursor: pointer;
+    background-color: rgb(18, 16, 16);
+    color: aliceblue;
+    border: none;
+    transition: width 2s;
+    outline: none;
+}
+
+button:hover{
+    transform: rotate(180deg);
+    box-shadow: 1px 1px 29px rgb(18, 16, 16);
+
+}
